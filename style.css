@@ -1,0 +1,919 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Oswald:wght@200;400&family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Serif", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header design*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5rem;
+  background: #222;
+  z-index: 1000;
+  position: fixed;
+}
+.nav #logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.nav .pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .pages li {
+  list-style: none;
+  padding-right: 30px;
+}
+.nav .pages li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #fff;
+}
+.nav .pages li a.active,
+.nav .pages li a:hover {
+  color: #db1414;
+  transition: all 0.3s ease;
+}
+#menu-sign {
+  color: #fff;
+  display: none;
+}
+
+/* background for header*/
+.bg-img {
+  background-image: url(./images/bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  z-index: -1;
+}
+
+/*background overlay*/
+.bg-img .overlay {
+  background-color: #171819;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+.overlay-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlay-wrapper p {
+  color: #ffd;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.overlay-wrapper h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.overlay-wrapper .btn {
+  margin-top: 1.3rem;
+}
+.overlay-wrapper .btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.overlay-wrapper .btn a.get-start {
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 0px 10px 20px;
+}
+.overlay-wrapper .btn a.get-start:hover {
+  color: #db1414;
+}
+.overlay-wrapper .btn button {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+.overlay-wrapper .btn button.learn-more {
+  color: #db1414;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #db1414;
+  background: transparent;
+}
+.overlay-wrapper .btn button.learn-more:hover {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* details page design*/
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 13rem;
+  background-color: #171819;
+}
+.details .left {
+  width: 45%;
+}
+.details .left h2 {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: #fff;
+}
+.details .left h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.details .left p {
+  color: #ffd;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.details .left a {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #db1414;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.details .left a:hover {
+  color: #171819;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+.details .right {
+  width: 45%;
+  border-left: 1px solid #662262;
+  padding-left: 4rem;
+}
+.details .right h2 {
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: #fff;
+}
+.details .right h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.details .right h4 {
+  color: #fff;
+}
+.details .right p {
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+/*About us Page*/
+.about-us {
+  background-color: #f3f3f3;
+  padding: 7rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-us .about {
+  width: 40%;
+}
+.about-us .about h2 {
+  color: #171819;
+  font-size: 2rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+.about-us .about p {
+  color: #222;
+  font-size: 1.3rem;
+}
+.about-us .trainer {
+  width: 56%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-us .trainer .card-one {
+  width: 44%;
+  border-radius: 5px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 4.8px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+    13.4px 12.5px 10px rgba(0, 0, 0, 0.045),
+    32.3px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+    107px 100px 80px rgba(0, 0, 0, 0.09);
+}
+.about-us .trainer .card-one .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 7px;
+}
+.about-us .trainer .card-one .img img {
+  width: 100%;
+  object-fit: cover;
+}
+.about-us .trainer .card-one .profile .facebook,
+.about-us .trainer .card-one .profile .insta {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px 5px 10px;
+}
+.about-us .trainer .card-one .profile .facebook h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "IBM Plex Serif", serif;
+}
+.about-us .trainer .card-one .profile .facebook i,
+.about-us .trainer .card-one .profile .insta i {
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.5;
+  padding-top: 5px;
+}
+.about-us .trainer .card-one .profile .facebook i:hover,
+.about-us .trainer .card-one .profile .insta i:hover {
+  opacity: 1;
+}
+
+/* classes Section*/
+
+.classes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 70px;
+}
+.classes .para {
+  font-size: 1.7rem;
+  color: #222;
+  padding-bottom: 0.5rem;
+}
+.classes .h3 {
+  font-size: 2rem;
+  color: #171819;
+  font-family: "IBM Plex Serif", serif;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+.classes .testimonials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.classes .testimonials .card-one {
+  width: 23%;
+  border-radius: 5px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 4.8px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+    13.4px 12.5px 10px rgba(0, 0, 0, 0.045),
+    32.3px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+    107px 100px 80px rgba(0, 0, 0, 0.09);
+}
+.classes .testimonials .card-one .img img {
+  width: 100%;
+  object-fit: cover;
+}
+.classes .testimonials .card-one .profile {
+  display: inline;
+}
+.classes .testimonials .card-one .profile .class-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.classes .testimonials .card-one .profile .class-member h3 {
+  color: #222;
+  font-size: 1.7rem;
+  font-family: "IBM Plex Serif", serif;
+  padding-bottom: 0.5rem;
+}
+.classes .testimonials .card-one .profile .class-member span {
+  font-size: 1rem;
+  color: #222;
+  font-weight: bold;
+  background-color: #db1414;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  padding: 10px 3px;
+  margin-right: 5px;
+}
+.classes .testimonials .card-one .profile .price :first-child {
+  font-size: 1rem;
+  color: #222;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+/*contact detals */
+.contact-us {
+  padding: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-us .contact-form {
+  width: 45%;
+}
+.contact-us .contact-form h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #212f35;
+}
+.contact-us .contact-form .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contact-us .contact-form .form input,
+.contact-us .contact-form .form textarea {
+  width: 100%;
+  margin: 0.4rem;
+  padding: 1rem;
+  border-radius: 1px;
+  outline: none;
+}
+.contact-us .contact-form .form input:focus,
+.contact-us .contact-form .form textarea:focus {
+  border-color: #db1414;
+}
+.contact-us .contact-form .form input::placeholder {
+  color: #171819;
+  font-size: 1.3rem;
+  outline: none;
+}
+.contact-us .contact-form .form textarea::placeholder {
+  color: #212f35;
+  font-size: 1.2rem;
+  height: 80%;
+}
+.contact-us .contact-form .form button {
+  width: 100%;
+  padding: 10px 0;
+  margin: 20px 0px 0px 5px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 900;
+  background-color: #555252;
+  cursor: pointer;
+}
+.contact-us .locate-us {
+  width: 45%;
+}
+.contact-us .locate-us h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  color: #212f35;
+}
+.contact-us .locate-us iframe {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Footer Design*/
+
+footer {
+  border-top: 1px solid #212f35;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.8rem 0;
+  background-color: #171819;
+}
+footer .copyright p {
+  font-size: 1.2rem;
+  color: #f3f3f3;
+}
+footer .contact-me p {
+  font-size: 1.2rem;
+  padding: 3px 0;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+footer .contact-me p i {
+  color: #c04343;
+}
+
+/* Media Queries*/
+
+/* nav & details section media queries*/
+@media screen and (max-width: 985px) {
+  /*nav section*/
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+  .nav .pages {
+    display: none;
+  }
+  .nav #menu-sign {
+    display: block;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0px 10px;
+  }
+  .bg-img {
+    background-position: center;
+  }
+  .overlay-wrapper p {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  .overlay-wrapper h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .overlay-wrapper .btn {
+    margin-top: 1rem;
+  }
+  .overlay-wrapper .btn a.get-start {
+    font-weight: 600;
+    padding: 0px 10px 20px;
+  }
+  .overlay-wrapper .btn a.get-start:hover {
+    color: #f16464;
+  }
+  .overlay-wrapper .btn button.learn-more {
+    color: #e0e0e0;
+  }
+  .overlay-wrapper .btn button.learn-more:hover {
+    background-color: #171819;
+    color: #fff;
+  }
+
+  /* details section*/
+  .details {
+    padding: 5rem 5rem;
+  }
+  .details .left {
+    width: 50%;
+  }
+  .details .left h2 {
+    font-size: 1.8rem;
+    padding-bottom: 1.3rem;
+  }
+  .details .left h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 0.7rem;
+  }
+  .details .left p {
+    font-size: 0.8rem;
+    padding-bottom: 1.5 rem;
+  }
+  .details .left a {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .details .right {
+    width: 50%;
+    padding-left: 3rem;
+  }
+  .details .right h2 {
+    font-size: 1.8rem;
+    padding-bottom: 1.3rem;
+  }
+  .details .right h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 0.7rem;
+  }
+  .details .right h4 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .details .right p {
+    padding: 5px 0px;
+    margin-bottom: 0.8rem;
+    color: #8e8f90;
+  }
+}
+@media screen and (max-width: 970px) {
+  .nav #logo {
+    font-size: 1.3rem;
+  }
+  .nav .pages {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 80vh;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    transition: all 0.5s ease;
+  }
+  .nav .pages li {
+    padding: 10px 0px;
+  }
+  .nav .pages li a {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .nav .pages li a.active,
+  .nav .pages li a:hover {
+    color: #21ca1c;
+    transition: all 0.3s ease;
+  }
+  #menu-sign {
+    color: red;
+    z-index: 100000;
+    display: initial;
+    cursor: pointer;
+  }
+}
+
+/*about, classes, Contact & footer section media queries*/
+@media screen and (max-width: 985px) {
+  /* about section*/
+  .about-us {
+    padding: 6rem 3rem;
+  }
+  .about-us .about h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding-bottom: 0.8rem;
+  }
+  .about-us .about p {
+    font-size: 1rem;
+  }
+  .about-us .trainer .card-one {
+    width: 48%;
+  }
+  .about-us .trainer .card-one .profile .facebook,
+  .about-us .trainer .card-one .profile .insta {
+    padding: 5px 15px 0px 15px;
+  }
+  .about-us .trainer .card-one .profile .facebook h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .about-us .trainer .card-one .profile .facebook i,
+  .about-us .trainer .card-one .profile .insta i {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    padding-top: 3px;
+  }
+
+  /* classes section*/
+  .classes {
+    padding: 45px 50px;
+  }
+  .classes .para {
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+  }
+  .classes .h3 {
+    font-size: 1.8rem;
+  }
+  .classes .testimonials {
+    margin-top: 2rem;
+  }
+  .classes .testimonials .card-one {
+    width: 23%;
+    border-radius: 5px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 4.8px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+      13.4px 12.5px 10px rgba(0, 0, 0, 0.045),
+      32.3px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+      107px 100px 80px rgba(0, 0, 0, 0.09);
+  }
+  .classes .testimonials .card-one .img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .classes .testimonials .card-one .profile {
+    display: inline;
+  }
+  .classes .testimonials .card-one .profile .class-member h3 {
+    font-size: 1.4rem;
+    font-family: "IBM Plex Serif", serif;
+    padding-bottom: 0.4rem;
+  }
+  .classes .testimonials .card-one .profile .class-member span {
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 7px 4px;
+    margin-right: 5px;
+  }
+  .classes .testimonials .card-one .profile .price :first-child {
+    font-size: 1rem;
+    padding-bottom: 4px;
+  }
+  .classes .testimonials .card-one .profile .price :last-child {
+    font-size: 0.9rem;
+    line-height: 16px;
+  }
+
+  /*Cotact media queries*/
+  .contact-us {
+    padding: 5rem;
+  }
+  .contact-us .contact-form h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  .contact-us .contact-form .form input,
+  .contact-us .contact-form .form textarea {
+    margin: 0.6rem 0rem;
+    padding: 0.8rem;
+  }
+  .contact-us .contact-form .form input::placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-us .contact-form .form textarea::placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-us .contact-form .form button {
+    padding: 10px 0;
+    margin: 20px 10px 0px 0px;
+    font-size: 1.1rem;
+  }
+  .contact-us .locate-us {
+    width: 48%;
+  }
+  .contact-us .locate-us h2 {
+    font-size: 1.8rem;
+    padding-bottom: 0.7rem;
+  }
+  .contact-us .locate-us iframe {
+    margin: 0.8rem 0;
+  }
+
+  /*footer section media queries*/
+  footer {
+    padding: 1.4rem 0;
+  }
+  footer .copyright p {
+    font-size: 1rem;
+  }
+  footer .contact-me p {
+    font-size: 1.1rem;
+    padding: 3px 0;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .nav #menu-sign {
+    font-size: 1.5rem;
+  }
+  .bg-img {
+    background-position: center;
+  }
+  .overlay-wrapper p {
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+  .overlay-wrapper h2 {
+    font-size: 1.5rem;
+  }
+  .overlay-wrapper .btn {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-wrapper .btn a.get-start {
+    margin-bottom: -6px;
+  }
+
+  /* details section*/
+  .details {
+    padding: 4rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .details .left {
+    width: 73%;
+  }
+  .details .left h2 {
+    padding-bottom: 1rem;
+  }
+  .details .left a {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
+  }
+  .details .right {
+    width: 73%;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 2px solid #662262;
+    margin-top: 17px;
+  }
+  .details .right h2 {
+    padding-bottom: 1rem;
+  }
+  .about-us {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us .about {
+    width: 73%;
+    margin-bottom: 1.8rem;
+  }
+  .about-us .about h2 {
+    font-size: 1.8rem;
+  }
+  .about-us .trainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us .trainer .card-one {
+    width: 73%;
+    margin: 30px 0px;
+  }
+
+  /* classes section*/
+  .classes {
+    padding: 45px 10px;
+  }
+  .classes .para {
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+  }
+  .classes .h3 {
+    font-size: 1.8rem;
+  }
+  .classes .testimonials {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .classes .testimonials .card-one {
+    width: 50%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 4.8px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+      13.4px 12.5px 10px rgba(0, 0, 0, 0.045),
+      32.3px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+      107px 100px 80px rgba(0, 0, 0, 0.09);
+  }
+
+  /*Cotact media queries*/
+  .contact-us {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-us .contact-form {
+    width: 70%;
+  }
+  .contact-us .contact-form .form button {
+    margin: 10px 10px 0px 0px;
+  }
+  .contact-us .locate-us {
+    width: 70%;
+    margin-top: 4rem;
+  }
+
+  /*footer section media queries*/
+  footer {
+    padding: 5.4rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .copyright p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav #menu-sign {
+    font-size: 1.3rem;
+  }
+  .overlay-wrapper {
+    width: 70%;
+  }
+  .overlay-wrapper p {
+    font-size: 1rem;
+  }
+  .overlay-wrapper h2 {
+    font-size: 1.8rem;
+  }
+  .overlay-wrapper .btn {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-wrapper .btn a.get-start {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  /* details section*/
+  .details {
+    padding: 3rem 1rem;
+  }
+  .details .left {
+    width: 100%;
+  }
+  .details .right {
+    width: 100%;
+  }
+  .details .right h2 {
+    padding-bottom: 1rem;
+  }
+  .about-us {
+    padding: 4rem 1rem;
+  }
+  .about-us .about {
+    width: 100%;
+  }
+  .about-us .trainer {
+    width: 75%;
+  }
+  .about-us .trainer .card-one {
+    width: 100%;
+  }
+
+  /* classes section*/
+  .classes {
+    padding: 4rem 1rem;
+  }
+  .classes .para {
+    padding-bottom: 0.2rem;
+  }
+  .classes .h3 {
+    font-size: 1.8rem;
+  }
+  .classes .testimonials {
+    margin-top: 2rem;
+  }
+  .classes .testimonials .card-one {
+    width: 75%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 4.8px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+      13.4px 12.5px 10px rgba(0, 0, 0, 0.045),
+      32.3px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+      107px 100px 80px rgba(0, 0, 0, 0.09);
+  }
+
+  /*Cotact media queries*/
+  .contact-us {
+    padding: 4rem 1.5rem;
+  }
+  .contact-us .contact-form {
+    width: 100%;
+  }
+  .contact-us .locate-us {
+    width: 100%;
+  }
+
+  /*footer section media queries*/
+
+  footer .copyright p {
+    font-size: 1.1rem;
+  }
+  footer .contact-me p {
+    font-size: 1rem;
+  }
+}
